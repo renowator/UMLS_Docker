@@ -17,7 +17,7 @@ You can create a Docker Image with custom UMLS database installed using provided
   -- In each lne starting with ` $MYSQL_HOME/bin/mysql ` replace ` -u $user -p $password ` with ` -vvv --local-infile `
 
 # Build Docker image and run containers with the image
- - With Docker Daemon running execute command  ` docker build -t umls-v-your_version . ` to buiuld an image. If all the instructions above were followed you will not have any errors. This might take a few hours.
+ - With Docker Daemon running execute command  ` docker build -t umls-v-your_version . ` to build an image. If all the instructions above were followed you will not have any errors. This might take a few hours.
  - Once the image is built you can run containers with ` docker run --name=container_name umls-v-your_version ` 
  - The UMLS database will not be available instantly. Once the container is running the database will load and MySQL will be restarted. To check if database is available you can use ` docker logs container_name | grep Shutdown `. If this command returns no result, the database is still loading.
  - You can run commands in the image using ` docker exec -it container_name command `
