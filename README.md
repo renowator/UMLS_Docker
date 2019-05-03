@@ -6,7 +6,7 @@ You can create a Docker Image with custom UMLS database installed using provided
 
   - Run UMLS Java-based installer with required version and level of installation.
   - Copy contents of this folder to the installation folder containing /NET and /META folders.
-  - Copy UMLS-Interface-1.51 and UMLS-Similarity-1.47 into the installation folder containing /NET and /META folders.
+  - Copy UMLS-Interface-1.51 (https://metacpan.org/release/UMLS-Interface) and UMLS-Similarity-1.47 (https://metacpan.org/release/UMLS-Similarity) into the installation folder containing /NET and /META folders.
   - In /NET/populate_net_mysql_db.sh file replace corresponding lines with following:
 -- ` MYSQL_HOME=/usr `
 -- ` user=root `
