@@ -8,11 +8,11 @@ You can create a Docker Image with custom UMLS database installed using provided
   - Copy contents of this folder to the installation folder containing /NET and /META folders.
   - Copy UMLS-Interface-1.51 (https://metacpan.org/release/UMLS-Interface) and UMLS-Similarity-1.47 (https://metacpan.org/release/UMLS-Similarity) into the installation folder containing /NET and /META folders.
   - In /NET/populate_net_mysql_db.sh file replace corresponding lines with following:
--- ` MYSQL_HOME=/usr `
--- ` user=root `
--- ` password= `
--- ` db_name=umls `
--- ` $MYSQL_HOME/bin/mysql -vvv --local-infile $db_name < mysql_net_tables.sql >> mysql_net.log 2>&1 `
+-1. ` MYSQL_HOME=/usr `
+-2. ` user=root `
+-3. ` password= `
+-4. ` db_name=umls `
+-5. ` $MYSQL_HOME/bin/mysql -vvv --local-infile $db_name < mysql_net_tables.sql >> mysql_net.log 2>&1 `
   - In META/populate_mysql_db.sh replace lines as 1-4 above and:
   -- In each lne starting with ` $MYSQL_HOME/bin/mysql ` replace ` -u $user -p $password ` with ` -vvv --local-infile `
 
